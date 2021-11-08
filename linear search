@@ -1,0 +1,13 @@
+class Solution:
+    def rotate(self, nums, k):
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        temp = []
+        l = len(nums)
+        k = k%l
+        for i in range(l):
+            temp.append(nums[(i-k)])
+            
+        nums[:] = temp
+        
