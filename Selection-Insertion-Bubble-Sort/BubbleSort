@@ -1,0 +1,17 @@
+L = [7, 3, 9, 2, 0, 4, 1, 6, 8, 5]
+length = len(L)
+
+
+def bubbleSort(L):
+    if length == 0 or length == 1:
+        return L
+    for i in range(length):
+        for j in range(length - i - 1):
+            if L[j] > L[j + 1]:
+                temp = L[j]
+                L[j] = L[j + 1]
+                L[j + 1] = temp
+    return L
+
+
+print(bubbleSort(L))
