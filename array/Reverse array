@@ -70,7 +70,7 @@ print(TheReverseArray([1,2,4,5,2,3]))
 
 
 
-#forth#
+#fourth#
 def TheReverseArray(list):
     N = len(list)
     for i in range(int(len(list) / 2)):
