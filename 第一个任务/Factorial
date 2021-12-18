@@ -1,0 +1,10 @@
+m=int(input("please enter a number:"))
+i=1
+t=m
+while True:
+  if(i>=m):
+    break
+  else:
+   m=m-1
+   t=t*m
+print(t)
