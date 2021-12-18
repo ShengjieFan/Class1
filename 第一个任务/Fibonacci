@@ -1,0 +1,18 @@
+m=int(input("please enter the number of the sequence:"))
+n1=0
+n2=1
+i=1
+if(m<=0):
+  print("please enter a positive integer")
+elif(m==1):
+  print("the Fibonacci nuber at this position is",0)
+else:
+  while True:
+    if(i>=m):
+      break
+    else:
+      s=n1+n2
+      n1=n2
+      n2=s
+      i=i+1
+  print("the Fibonacci nuber at this position is:",n1)
