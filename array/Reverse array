@@ -1,4 +1,4 @@
-#first#
+#Slice of array#
 class Solution:
     def rotate(self, A: List[int], k: int) -> None:
         def reverse(i, j):
