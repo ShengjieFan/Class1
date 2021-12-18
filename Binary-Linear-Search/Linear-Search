@@ -1,0 +1,17 @@
+def linesearch(arr,x):
+ 
+    n = len(arr)
+    for i in range(n):
+        if x == arr[i]:
+            return i
+    return -1
+ 
+arr = ['a','b','w','q','g']
+x = 'g'
+ 
+result = linesearch(arr,x)
+ 
+if result == -1:
+    print('there no this value')
+else:
+    print('the index is ',result)
