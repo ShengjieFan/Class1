@@ -1,0 +1,22 @@
+import math
+s=int(input("please enter a four-digit number:"))
+if(1<=s/1000<=9):
+  a=int(math.floor(s/1000))
+  b=int(math.floor(s/100)-a*10)
+  c=int(math.floor(s/10)-a*100-b*10)
+  d=int(s-a*1000-b*100-c*10)
+  print("Its reverse order is:",a+b+c+d)
+else:
+  print("wrong input,please enter a four-digit number")
+  
+  
+  
+
+#second method#
+m=int(input("please enter an positive integer number:"))
+f=0
+while(m%10!=0):
+ print(m%10)
+ f=f+m%10
+ m=int(m/10)
+print(f)
