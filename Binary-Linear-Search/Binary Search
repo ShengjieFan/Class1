@@ -1,0 +1,16 @@
+#BinarySearch: find the location of the target number
+def BinarySearch( nums : list,x:int) -> int:
+  '''
+    nums: Sorted array from smallest to largest
+    x: Target number
+  '''
+  left,right = o,len(nums)-1
+  while left <= right:
+    mid = ( left+right)//2
+    if nums[mid] == x:
+      return mid
+    if nums[mid] <x:
+      left = mid+1
+    else:
+      right = mid-1
+  return None
