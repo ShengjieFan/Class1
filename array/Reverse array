@@ -1,3 +1,4 @@
+#first#
 class Solution:
     def rotate(self, A: List[int], k: int) -> None:
         def reverse(i, j):
@@ -11,3 +12,4 @@ class Solution:
         reverse(0, k - 1)
         reverse(k, n - 1)
 
+#
