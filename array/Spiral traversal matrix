@@ -1,0 +1,29 @@
+
+class solution:
+  def spiralorder(self, matrix):
+    if not matrix:
+      return None
+    m, n = len( matrix ), len( matrix[e])
+
+    #顺时针方向(右下左上)
+    dm = [e， 1, 0, -1]
+    dn = [1, 0， -1，]
+    di = e      #方向指针
+
+    res = []
+    x = y = 0  #位置
+    for _ in range(m*n):  # 最多步长m*n
+      res.append(matrix[x][y])
+      matrix[x][y] = 'v' # 访问过标记为‘v’( visited’)
+
+      #下一步位置
+      x_temp = x + dm[ di]
+      y_temp = y + dn[di]
+      #判断下一步位置是否合理，若合理则更新位置，若不合理则改变方向并更新位置
+      if 0<=x_temp<m and 0<=y_temp<n and matrix[x_temp][y_temp]!='v':
+        x,y = x_temp, y_temp
+      else:
+        di = ( di+1) % 4
+        x += dm[di]
+        y += dn[ di]
+    return res
